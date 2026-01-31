@@ -94,7 +94,7 @@ const SideBar = () => {
         variant="outline"
         size="icon"
         onClick={() => setOpen(true)}
-        className="fixed left-4 top-4 z-50 md:hidden"
+        className="fixed left-4 top-4 z-100 md:hidden"
         aria-label="Open menu"
       >
         <Menu className="h-5 w-5" />
