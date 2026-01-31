@@ -20,7 +20,7 @@ export function ModeToggle() {
       aria-label="Toggle theme"
       className="
         relative 
-       
+       hidden
         transition-colors duration-300
         hover:text-foreground
         dark:hover:text-white
