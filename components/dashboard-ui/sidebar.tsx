@@ -5,7 +5,7 @@ import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Menu, Settings2, X } from "lucide-react"
+import { Menu, Settings, Settings2, X } from "lucide-react"
 
 import { MenuItems } from "@/constants/MenuItems"
 import { cn } from "@/lib/utils"
@@ -80,7 +80,7 @@ const SideBar = () => {
               : "text-primary-foreground/60 hover:bg-primary-foreground/10 hover:text-primary-foreground"
           )}
         >
-          <Settings2/>
+          <Settings />
           Settings
         </Link>
       </div>
