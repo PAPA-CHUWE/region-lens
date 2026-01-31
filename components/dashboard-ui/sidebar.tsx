@@ -111,7 +111,7 @@ const SideBar = () => {
       {/* Mobile sidebar */}
       <aside
         className={cn(
-          "fixed top-0 left-0 z-50 h-screen w-56 bg-primary text-primary-foreground rounded-r-xl",
+          "fixed top-0 left-0 z-90 h-screen w-56 bg-primary text-primary-foreground rounded-r-xl",
           "transform transition-transform duration-300 ease-in-out md:hidden",
           open ? "translate-x-0" : "-translate-x-full"
         )}
