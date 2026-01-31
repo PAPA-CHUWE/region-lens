@@ -90,15 +90,19 @@ const SideBar = () => {
   return (
     <>
       {/* Mobile menu button */}
-      <Button
-        variant="outline"
-        size="icon"
-        onClick={() => setOpen(true)}
-        className="fixed left-4 top-4 z-100 md:hidden"
-        aria-label="Open menu"
-      >
-        <Menu className="h-5 w-5" />
-      </Button>
+      {/* Mobile menu button (hide when sidebar is open) */}
+{!open && (
+  <Button
+    variant="outline"
+    size="icon"
+    onClick={() => setOpen(true)}
+    className="fixed left-4 top-4 z-50 md:hidden"
+    aria-label="Open menu"
+  >
+    <Menu className="h-5 w-5" />
+  </Button>
+)}
+
 
       {/* Mobile overlay */}
       {open && (
