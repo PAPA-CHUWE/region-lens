@@ -42,7 +42,7 @@ const Settings = () => {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-lg font-semibold">General Information</h1>
-            <p className="text-sm text-muted-foreground text-wrap">
+            <p className="text-sm text-muted-foreground text-wrap md:px-0 px-2">
               Update your profile and organization details
             </p>
           </div>
