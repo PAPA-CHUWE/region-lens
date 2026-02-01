@@ -42,14 +42,14 @@ const Settings = () => {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-lg font-semibold">General Information</h1>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground text-wrap">
               Update your profile and organization details
             </p>
           </div>
 
-          <div className="flex gap-2">
-            <Button variant="outline">Cancel</Button>
-            <Button>Save Changes</Button>
+          <div className="flex gap-2 md:flex-row flex-col">
+            <Button variant="outline" className="w-full md:w-auto">Cancel</Button>
+            <Button className="w-full md:w-auto">Save Changes</Button>
           </div>
         </div>
 
@@ -72,11 +72,11 @@ const Settings = () => {
                 </p>
               </div>
 
-              <div className="ml-auto flex gap-2">
-                <Button size="sm" variant="outline">
+              <div className="ml-auto flex gap-2 md:flex-row flex-col">
+                <Button size="sm" variant="outline" className="w-full md:w-auto">
                   Upload Photo
                 </Button>
-                <Button size="sm" variant="ghost">
+                <Button size="sm" variant="ghost" className="w-full md:w-auto">
                   Delete
                 </Button>
               </div>
