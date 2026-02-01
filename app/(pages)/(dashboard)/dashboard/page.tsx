@@ -67,7 +67,7 @@ export default function DashBoard() {
           {isLoading ? (
             <Skeleton className="h-[400px] w-full rounded-2xl" />
           ) : (
-            <div className="h-[420px] rounded-2xl ring-1 ring-ring bg-card backdrop-blur-xl p-6 shadow-lg">
+            <div className="h-[410px] rounded-2xl ring-1 ring-ring bg-card backdrop-blur-xl p-6 shadow-lg supports-backdrop-filter:bg-card/70">
               graph
             </div>
           )}
@@ -78,7 +78,7 @@ export default function DashBoard() {
           {isLoading ? (
             <Skeleton className="h-[400px] w-full rounded-2xl" />
           ) : (
-            <div className="h-[420px] rounded-2xl ring-1 ring-ring bg-card backdrop-blur-xl p-6 shadow-lg">
+            <div className="h-[410px] rounded-2xl ring-1 ring-ring bg-card backdrop-blur-xl p-6 shadow-lg supports-backdrop-filter:bg-card/70">
               Graphs
             </div>
           )}

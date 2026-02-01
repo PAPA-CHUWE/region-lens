@@ -16,7 +16,7 @@ const SearchInput = () => {
         placeholder="Search regions, countries, indicators..."
         className="
           pl-10
-          rounded-xl
+          rounded-lg
           bg-background
           ring-ring ring-2
           focus-visible:ring-2
