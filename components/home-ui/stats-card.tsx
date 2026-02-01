@@ -37,7 +37,7 @@ export default function StatsCard({
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-xl border bg-card backdrop-blur-sm shadow-lg",
+        "relative overflow-hidden rounded-lg cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out border bg-card backdrop-blur-sm shadow-lg",
         "supports-backdrop-filter:bg-card/70",
         "transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-xl",
         "hover:ring-1 hover:ring-ring",
@@ -68,7 +68,7 @@ export default function StatsCard({
           {isLoading ? (
             <Skeleton className="h-10 w-10 rounded-xl" />
           ) : icon ? (
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
               {icon}
             </div>
           ) : null}
