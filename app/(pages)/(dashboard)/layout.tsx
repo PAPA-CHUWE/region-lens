@@ -14,7 +14,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <div className="flex flex-col flex-1 md:ml-56">
         <TopBar />
 
-        <main className="flex-1 px-6 py-5 overflow-y-auto">
+        <main className="flex-1 px-6 py-5 overflow-y-auto overflow-x-hidden">
           {children}
         </main>
       </div>

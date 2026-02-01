@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 
 import SearchInput from "../search-ui/search-input";
 import ProfileMenu from "../user-menu/profile-menu";
+import NotificationBtn from "../notifications-ui/notification";
 
 const TopBar = () => {
   return (
@@ -24,15 +25,7 @@ const TopBar = () => {
               <SearchInput />
             </div>
 
-            <Button
-              variant="ghost"
-              size="icon"
-              aria-label="Notifications"
-              className="relative transition-colors duration-300 hover:text-foreground dark:hover:text-white"
-            >
-              <Bell className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 h-2 w-2 rounded-full bg-accent" />
-            </Button>
+            <NotificationBtn/>
 
             <ModeToggle />
             <ProfileMenu />

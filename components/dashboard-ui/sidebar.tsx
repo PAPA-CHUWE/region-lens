@@ -115,7 +115,7 @@ const SideBar = () => {
       {/* Mobile sidebar */}
       <aside
         className={cn(
-          "fixed top-0 left-0 z-90 h-screen w-56 bg-primary text-primary-foreground rounded-r-xl",
+          "fixed top-0 left-0 z-90 h-screen w-56 bg-primary text-primary-foreground rounded-r-lg",
           "transform transition-transform duration-300 ease-in-out md:hidden",
           open ? "translate-x-0" : "-translate-x-full"
         )}
@@ -156,7 +156,7 @@ const SideBar = () => {
       </aside>
 
       {/* Desktop sidebar */}
-      <aside className="fixed top-0 left-0 z-40 hidden h-screen w-56 flex-col rounded-r-xl bg-primary text-primary-foreground md:flex">
+      <aside className="fixed top-0 left-0 z-40 hidden h-screen w-56 flex-col rounded-r-lg bg-primary text-primary-foreground md:flex">
         <NavContent />
       </aside>
     </>
