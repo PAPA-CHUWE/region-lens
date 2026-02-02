@@ -20,7 +20,7 @@ const SideBar = () => {
     setOpen(false)
   }, [pathname])
 
-  const NavContent = () => (
+  const NavContent = React.useMemo(() => (
     <>
       {/* Logo */}
       <div className="px-6 py-5">
@@ -30,17 +30,10 @@ const SideBar = () => {
             width={180}
             height={100}
             alt="RegionLens"
-            className="block dark:hidden"
+            className="block "
             priority
           />
-          <Image
-            src="/logos/regionlens-dark.svg"
-            width={180}
-            height={100}
-            alt="RegionLens dark"
-            className="hidden dark:block"
-            priority
-          />
+          
         </Link>
       </div>
 
@@ -56,7 +49,7 @@ const SideBar = () => {
               key={item.label}
               href={item.href}
               className={cn(
-                "flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition",
+                "flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition text-primary-foreground dark:text-primary",
                 isActive
                   ? "bg-card text-foreground shadow-sm"
                   : "text-primary-foreground/80 hover:bg-primary-foreground/10 hover:text-primary-foreground"
@@ -85,7 +78,7 @@ const SideBar = () => {
         </Link>
       </div>
     </>
-  )
+  ), [pathname])
 
   return (
     <>
@@ -115,7 +108,7 @@ const SideBar = () => {
       {/* Mobile sidebar */}
       <aside
         className={cn(
-          "fixed top-0 left-0 z-90 h-screen w-56 bg-primary text-primary-foreground rounded-r-lg",
+          "fixed top-0 left-0 z-90 h-screen w-56 bg-primary dark:bg-primary-foreground text-primary-foreground dark:text-primary rounded-r-lg",
           "transform transition-transform duration-300 ease-in-out md:hidden",
           open ? "translate-x-0" : "-translate-x-full"
         )}
@@ -129,18 +122,12 @@ const SideBar = () => {
                 width={180}
                 height={100}
                 alt="RegionLens"
-                className="block dark:hidden"
+                className="block "
                 priority
               />
-              <Image
-                src="/logos/regionlens-dark.svg"
-                width={180}
-                height={100}
-                alt="RegionLens dark"
-                className="hidden dark:block"
-                priority
-              />
+             
             </Link>
+           
           </div>
           <Button
             variant="ghost"
@@ -152,12 +139,12 @@ const SideBar = () => {
           </Button>
         </div>
 
-        <NavContent />
+        {NavContent}
       </aside>
 
       {/* Desktop sidebar */}
-      <aside className="fixed top-0 left-0 z-40 hidden h-screen w-56 flex-col rounded-r-lg bg-primary text-primary-foreground md:flex">
-        <NavContent />
+      <aside className="fixed top-0 left-0 z-40 hidden h-screen w-56 flex-col rounded-r-lg bg-primary text-primary-foreground md:flex dark:bg-primary-foreground dark:text-primary  border-r-2 border-border">
+        {NavContent}
       </aside>
     </>
   )
